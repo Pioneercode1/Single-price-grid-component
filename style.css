@@ -42,7 +42,7 @@ body {
 
 .component-container {
     width: 80%;
-    height: 39rem;
+    min-height: 38rem;
     background-color: var(--white);
     display: grid;
     grid-template-rows: repeat(3, 1fr);
@@ -147,4 +147,37 @@ body {
     font-size: var(--font-size-p);
     color: var(--gray-light);
     margin-block-end: 1rem;
+}
+
+@media (min-width: 1024px) {
+    body {
+        width: clamp(1024px, 73%, 68rem);
+        min-height: 100vh;
+    }
+
+    .component-container {
+        width: 80%;
+        min-height: 30rem;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .join-our-community {
+        grid-column: 1/span 2;
+        grid-template-rows: 1;
+        padding-inline: 2rem;
+    }
+
+    .why-usn {
+        padding-inline: 2rem;
+        /* grid-column: 2;
+        grid-template-rows: 2; */
+    }
+
+    .monthly-subscription {
+        grid-column: 1;
+        grid-template-rows: 2;
+        padding-inline: 2rem;
+    }
 }
